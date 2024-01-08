@@ -5,7 +5,7 @@ def divisible_by_2(my_list=[]):
     listdv = []
     for i in my_list:
         if (i % 2) == 0:
-            listdv.oppend(True)
+            listdv.append(True)
         else:
-            listdv.oppend(False)
+            listdv.append(False)
     return listdv
