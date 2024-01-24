@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square."""
 
+
 class Square:
     """Represent a square."""
     def __init__(self, size=0, position=(0, 0)):
@@ -54,7 +55,7 @@ class Square:
 
         for i in range(self._position[1]):
             print("")
-        
+
         for i in range(self._size):
             print(" " * self._position[0], end="")
             print("#" * self._size)
