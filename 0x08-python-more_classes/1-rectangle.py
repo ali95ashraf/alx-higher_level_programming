@@ -14,7 +14,7 @@ class Rectangle:
     @property
     def width(self):
         """getter for the private instance attribute width"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -23,12 +23,12 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._width = value
+        self.__width = value
 
     @property
     def height(self):
         """getter for the private instance attribute height"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -37,4 +37,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = value
+        self.__height = value
