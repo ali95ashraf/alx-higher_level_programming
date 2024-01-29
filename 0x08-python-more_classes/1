@@ -69,8 +69,7 @@ class Rectangle:
         '''Returns string representation.'''
         if not self.width or not self.height:
             return ""
-        return ((str(self.print_symbol) * self.width + "\n") *
-                self.height)[:-1]
+        return ((str(self.print_symbol* self.width + "\n") * self.height)[:-1]
 
     def __repr__(self):
         '''Returns formal string representation.'''
@@ -80,3 +79,30 @@ class Rectangle:
         '''Called at instance deletion.'''
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        '''Returns the bigger of two rectangles.
+        Args:
+            rect_1: The first rectangle.
+            rect_2: The second rectangle.
+        Raises:
+            TypeError: If rect_1, rect_2 are not instances of Rectangle.
+        Returns:
+            The rectangle with the larger area.
+        '''
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
+    
+    @classmethod
+    def square(cls, size=0):
+        '''Instantiates a new square.
+        Args:
+            size: the size of the new square.
+        '''
+        return cls(size, size)

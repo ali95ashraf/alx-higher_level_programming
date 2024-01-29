@@ -13,7 +13,6 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         '''Constructor.
-        
         Args:
             width: The width of rectangle.
             height: The height of rectangle.
@@ -25,7 +24,6 @@ class Rectangle:
     @property
     def width(self):
         '''Property for the width of the rectangle.
-        
         Raises:
             TypeError: If width is not an integer.
             ValueError: If width is less than 0.
@@ -43,7 +41,6 @@ class Rectangle:
     @property
     def height(self):
         '''Property for the height of the rectangle.
-        
         Raises:
             TypeError: If height is not an integer.
             ValueError: If height is less than 0.
@@ -72,7 +69,8 @@ class Rectangle:
         '''Returns string representation.'''
         if not self.width or not self.height:
             return ""
-        return ((str(self.print_symbol) * self.width + "\n") * self.height)[:-1]
+        return ((str(self.print_symbol) * self.width + "\n") *
+                self.height)[:-1]
 
     def __repr__(self):
         '''Returns formal string representation.'''
@@ -86,7 +84,6 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         '''Returns the bigger of two rectangles.
-        
         Args:
             rect_1: The first rectangle.
             rect_2: The second rectangle.
@@ -102,11 +99,10 @@ class Rectangle:
         if rect_2.area() > rect_1.area():
             return rect_2
         return rect_1
-    
+
     @classmethod
     def square(cls, size=0):
         '''Instantiates a new square.
-        
         Args:
             size: the size of the new square.
         '''
