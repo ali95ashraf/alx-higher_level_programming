@@ -3,7 +3,8 @@
 
 
 import sys
-from json_file import save_to_json_file, load_from_json_file
+from 5_save_to_json_file import save_to_json_file
+from 6_load_from_json_file import load_from_json_file
 
 arglist = list(sys.argv[1:])
 
